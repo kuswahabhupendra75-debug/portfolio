@@ -3,7 +3,9 @@
 Welcome to the official repository for **Amine Codes**, a professional and modern developer portfolio website designed to showcase projects, skills, and certifications. 
 
 ## 🌐 Live Demo
-*(Add your live deployed link here once deployed, e.g., https://kuswahabhupendra75-debug.github.io/portfolio)*
+You can view the live portfolio here: **[Live Demo on GitHub Pages](https://kuswahabhupendra75-debug.github.io/portfolio/)**
+
+*(If deployed on Vercel, your link will look like `https://portfolio-kuswahabhupendra75-debug.vercel.app`)*
 
 ## ✨ Features
 - **Modern & Premium UI:** Crafted using modern design principles with a vibrant, sleek interface.
