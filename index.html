@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhupendra Sinh Kushwaha | Cybersecurity Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="overflow-x-hidden bg-white dark:bg-slate-900 transition-colors duration-300">
+
+    <!-- Header Logo & Name -->
+    <a href="#home" class="fixed top-8 left-8 lg:top-10 lg:left-12 z-50 flex items-center gap-4 group">
+        <div class="w-12 h-12 rounded-full border-2 border-indigo-600 overflow-hidden shadow-[0_0_15px_rgba(79,70,229,0.3)] transition-all group-hover:shadow-[0_0_25px_rgba(79,70,229,0.5)]">
+            <img src="profile.png" alt="Logo" class="w-full h-full object-cover scale-[1.2] origin-[50%_20%]">
+        </div>
+        <span class="text-2xl font-black text-slate-800 dark:text-white tracking-tight transition-colors group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Bhupendra Sinh Kushwaha</span>
+    </a>
+
+    <!-- Theme Toggle (Right Corner) -->
+    <div class="fixed top-8 right-8 lg:top-10 lg:right-12 z-50 flex items-center gap-4">
+        <button id="theme-toggle" class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-600 dark:hover:border-indigo-400 transition-colors shadow-sm bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
+            <i class="fas fa-sun" id="theme-icon"></i>
+        </button>
+    </div>
+
+    <nav class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
+        <div class="nav-blur px-8 py-4 rounded-full flex items-center gap-8 shadow-2xl dark:bg-slate-800/80 dark:shadow-slate-900/50 border border-transparent dark:border-slate-700/50 transition-colors duration-300">
+            <a href="#home" class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-bold"><i class="fas fa-home"></i> Home</a>
+            <a href="#about" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition"><i class="fas fa-user"></i> About</a>
+            <a href="#skills" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition"><i class="fas fa-tools"></i> Skills</a>
+            <a href="#projects" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition"><i class="fas fa-th-large"></i> Projects</a>
+            <a href="#certificates" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition"><i class="fas fa-certificate"></i> Certificates</a>
+            <a href="#contact" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition"><i class="fas fa-envelope"></i> Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center px-6 lg:px-32">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+            <div class="max-w-xl hero-left">
+                <span class="inline-block bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest mb-6 border border-indigo-100 dark:border-indigo-800/50">OPEN TO OPPORTUNITIES</span>
+                <h1 class="text-6xl font-extrabold text-slate-900 dark:text-white leading-tight">Hi, I'm <span class="text-indigo-600 dark:text-indigo-500">Bhupendra Sinh Kushwaha</span></h1>
+                <h2 id="typewriter" class="text-3xl font-semibold text-slate-400 dark:text-slate-500 mt-2 h-10"></h2>
+                <p class="text-slate-500 dark:text-slate-400 mt-6 text-lg leading-relaxed">I am focused on learning how to secure digital systems and prevent cyber threats. I enjoy exploring ethical hacking, network security, and vulnerability analysis.</p>
+                <div class="mt-10 flex gap-4">
+                    <a href="#projects" class="inline-block bg-slate-900 dark:bg-indigo-600 text-white px-10 py-4 rounded-2xl font-bold hover:bg-indigo-600 dark:hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-200 dark:shadow-indigo-900/20">View Projects</a>
+                    <a href="#contact" class="inline-block border-2 border-slate-200 dark:border-slate-700 px-10 py-4 rounded-2xl font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all text-slate-900 dark:text-white">Contact Me</a>
+                </div>
+            </div>
+            <div class="relative hero-right flex justify-center items-center group cursor-pointer">
+                <div class="w-80 h-80 lg:w-[450px] lg:h-[450px] bg-indigo-100 dark:bg-indigo-900/20 rounded-full absolute -z-10 transition-transform duration-500 group-hover:scale-105"></div>
+                
+                <div class="relative w-80 h-80 lg:w-[450px] lg:h-[450px] rounded-full z-10 shadow-2xl dark:shadow-indigo-900/10 border-8 border-white dark:border-slate-800 overflow-hidden flex justify-center items-center">
+                    <!-- Default profile (Bottom) -->
+                    <img src="profile.jpg" alt="Bhupendra Sinh Kushwaha" class="absolute inset-0 w-full h-full object-cover scale-[1.25] origin-[50%_20%]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 lg:px-32 bg-white dark:bg-slate-900 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <h3 class="text-indigo-600 dark:text-indigo-500 font-black text-sm tracking-[0.3em] uppercase mb-2">ABOUT ME</h3>
+            <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white mb-6">Securing the Digital World</h2>
+            <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">Based in Ahmedabad • BCA @ Kaushalya The Skill University (2027)</p>
+            <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed mt-4">I enjoy understanding how networks operate and how to secure them against modern threats. My main focus these days is expanding my knowledge in vulnerability analysis and penetration testing.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-6 lg:px-32 bg-slate-50 dark:bg-slate-800 transition-colors duration-300">
+        <div class="text-center mb-16">
+            <h3 class="text-indigo-600 dark:text-indigo-400 font-black text-sm tracking-[0.3em] uppercase mb-2">SKILLS</h3>
+            <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white">My Arsenal</h2>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div class="service-card p-8 rounded-3xl border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-900 text-center cursor-pointer shadow-sm">
+                <i class="fab fa-python text-4xl text-indigo-600 dark:text-indigo-400 mb-4"></i>
+                <h4 class="font-bold text-lg dark:text-slate-200">Python</h4>
+            </div>
+            <div class="service-card p-8 rounded-3xl border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-900 text-center cursor-pointer shadow-sm">
+                <i class="fab fa-linux text-4xl text-indigo-600 dark:text-indigo-400 mb-4"></i>
+                <h4 class="font-bold text-lg dark:text-slate-200">Linux</h4>
+            </div>
+            <div class="service-card p-8 rounded-3xl border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-900 text-center cursor-pointer shadow-sm">
+                <i class="fab fa-windows text-4xl text-indigo-600 dark:text-indigo-400 mb-4"></i>
+                <h4 class="font-bold text-lg dark:text-slate-200">Windows</h4>
+            </div>
+            <div class="service-card p-8 rounded-3xl border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-900 text-center cursor-pointer shadow-sm">
+                <i class="fas fa-network-wired text-4xl text-indigo-600 dark:text-indigo-400 mb-4"></i>
+                <h4 class="font-bold text-lg dark:text-slate-200">Wireshark & Nmap</h4>
+            </div>
+            <div class="service-card p-8 rounded-3xl border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-900 text-center cursor-pointer shadow-sm">
+                <i class="fas fa-shield-alt text-4xl text-indigo-600 dark:text-indigo-400 mb-4"></i>
+                <h4 class="font-bold text-lg dark:text-slate-200">Ethical Hacking</h4>
+            </div>
+            <div class="service-card p-8 rounded-3xl border border-slate-100 dark:border-slate-700 bg-white dark:bg-slate-900 text-center cursor-pointer shadow-sm">
+                <i class="fas fa-lock text-4xl text-indigo-600 dark:text-indigo-400 mb-4"></i>
+                <h4 class="font-bold text-lg dark:text-slate-200">Web Security</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-6 lg:px-32 bg-white dark:bg-slate-900 transition-colors duration-300">
+        <div class="text-center mb-16">
+            <h3 class="text-indigo-600 dark:text-indigo-500 font-black text-sm tracking-[0.3em] uppercase mb-2">PROJECTS</h3>
+            <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white">Featured Work</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Project 1 -->
+            <div class="bg-slate-50 dark:bg-slate-800 rounded-[40px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 card-hover border border-slate-100 dark:border-slate-700">
+                <div class="h-64 relative overflow-hidden group">
+                     <img src="cybershield_pro_demo.webp" alt="CyberShield Pro Demo" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-10">
+                    <h4 class="font-bold text-2xl mb-4 dark:text-white">CyberShield Pro</h4>
+                    <p class="text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">An AI-Based Phishing Website Detection System designed to protect users from malicious URLs.</p>
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="text-xs bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 font-bold px-3 py-1.5 rounded-full border border-indigo-200 dark:border-indigo-800">Python</span>
+                        <span class="text-xs bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 font-bold px-3 py-1.5 rounded-full border border-indigo-200 dark:border-indigo-800">Machine Learning</span>
+                        <span class="text-xs bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 font-bold px-3 py-1.5 rounded-full border border-indigo-200 dark:border-indigo-800">Streamlit</span>
+                    </div>
+                    <div class="border-t border-slate-200 dark:border-slate-700 pt-6">
+                        <a href="https://kuswahabhupendra75-debug-phishing-detector-app-fgyrfy.streamlit.app/" target="_blank" class="flex items-center justify-center gap-2 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-2xl transition-colors shadow-lg shadow-indigo-600/20">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="bg-slate-50 dark:bg-slate-800 rounded-[40px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 card-hover border border-slate-100 dark:border-slate-700">
+                <div class="h-64 relative overflow-hidden group">
+                     <img src="movie-demo.webp" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-10">
+                    <h4 class="font-bold text-2xl mb-4 dark:text-white">Hybrid Movie Recommender</h4>
+                    <p class="text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">A sophisticated Movie Recommendation System utilizing machine learning algorithms to suggest content.</p>
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="text-xs bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 font-bold px-3 py-1.5 rounded-full border border-indigo-200 dark:border-indigo-800">Python</span>
+                        <span class="text-xs bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 font-bold px-3 py-1.5 rounded-full border border-indigo-200 dark:border-indigo-800">TailwindCSS</span>
+                        <span class="text-xs bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 font-bold px-3 py-1.5 rounded-full border border-indigo-200 dark:border-indigo-800">Vercel</span>
+                    </div>
+                    <div class="border-t border-slate-200 dark:border-slate-700 pt-6">
+                        <a href="https://movie-recommedation-using-ml.vercel.app/" target="_blank" class="flex items-center justify-center gap-2 w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-2xl transition-colors shadow-lg shadow-indigo-600/20">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="py-24 px-6 lg:px-32 bg-slate-50 dark:bg-slate-800 relative transition-colors duration-300">
+        <!-- Decorative Background Element -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-100 dark:bg-indigo-900/30 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2 -z-10"></div>
+        
+        <div class="text-center mb-16 relative z-10">
+            <h3 class="text-indigo-600 dark:text-indigo-400 font-black text-sm tracking-[0.3em] uppercase mb-2">ACHIEVEMENTS</h3>
+            <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white">Certifications</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+            <!-- Certificate 1: Tech Explorer (April 2026) -->
+            <div class="bg-white dark:bg-slate-900 rounded-[32px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-slate-700 p-5 card-hover group cursor-pointer" onclick="window.open('cert-tech-explorer.jpg', '_blank')">
+                <div class="relative overflow-hidden rounded-[20px] shadow-sm bg-slate-50 dark:bg-slate-800 flex items-center justify-center aspect-[4/3]">
+                     <img src="cert-tech-explorer.jpg" alt="Tech Explorer Job Simulation" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" style="image-rendering: high-quality;">
+                     <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                <div class="pt-6 pb-2 px-2 text-center">
+                    <h4 class="font-bold text-xl mb-1 text-slate-800 dark:text-slate-200 transition-colors group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Tech Explorer</h4>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">April 2026</p>
+                    <span class="inline-block bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-indigo-100 dark:border-indigo-800">Commonwealth Bank</span>
+                </div>
+            </div>
+
+            <!-- Certificate 2: Cybersecurity (April 2026) -->
+            <div class="bg-white dark:bg-slate-900 rounded-[32px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-slate-700 p-5 card-hover group cursor-pointer" onclick="window.open('cert-cybersecurity.jpg', '_blank')">
+                <div class="relative overflow-hidden rounded-[20px] shadow-sm bg-slate-50 dark:bg-slate-800 flex items-center justify-center aspect-[4/3]">
+                     <img src="cert-cybersecurity.jpg" alt="Cybersecurity Job Simulation" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" style="image-rendering: high-quality;">
+                     <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                <div class="pt-6 pb-2 px-2 text-center">
+                    <h4 class="font-bold text-xl mb-1 text-slate-800 dark:text-slate-200 transition-colors group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Cybersecurity</h4>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">April 2026</p>
+                    <span class="inline-block bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-indigo-100 dark:border-indigo-800">Mastercard</span>
+                </div>
+            </div>
+
+            <!-- Certificate 3: Intro to Cyber (April 2026) -->
+            <div class="bg-white dark:bg-slate-900 rounded-[32px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-slate-700 p-5 card-hover group cursor-pointer" onclick="window.open('cert-intro-cyber.jpg', '_blank')">
+                <div class="relative overflow-hidden rounded-[20px] shadow-sm bg-slate-50 dark:bg-slate-800 flex items-center justify-center aspect-[4/3]">
+                     <img src="cert-intro-cyber.jpg" alt="Intro to Cybersecurity Job Simulation" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" style="image-rendering: high-quality;">
+                     <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                <div class="pt-6 pb-2 px-2 text-center">
+                    <h4 class="font-bold text-xl mb-1 text-slate-800 dark:text-slate-200 transition-colors group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Intro to Cyber</h4>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">April 2026</p>
+                    <span class="inline-block bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-indigo-100 dark:border-indigo-800">Commonwealth Bank</span>
+                </div>
+            </div>
+
+            <!-- Certificate 4: Cyber Analyst (April 2026) -->
+            <div class="bg-white dark:bg-slate-900 rounded-[32px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-slate-700 p-5 card-hover group cursor-pointer" onclick="window.open('cert-tata.jpg', '_blank')">
+                <div class="relative overflow-hidden rounded-[20px] shadow-sm bg-slate-50 dark:bg-slate-800 flex items-center justify-center aspect-[4/3]">
+                     <img src="cert-tata.jpg" alt="TATA Cybersecurity Analyst Job Simulation" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" style="image-rendering: high-quality;">
+                     <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                <div class="pt-6 pb-2 px-2 text-center">
+                    <h4 class="font-bold text-xl mb-1 text-slate-800 dark:text-slate-200 transition-colors group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Cyber Analyst</h4>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">April 2026</p>
+                    <span class="inline-block bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-indigo-100 dark:border-indigo-800">TATA</span>
+                </div>
+            </div>
+
+            <!-- Certificate 5: Shields Up: Cyber (April 2026) -->
+            <div class="bg-white dark:bg-slate-900 rounded-[32px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-slate-700 p-5 card-hover group cursor-pointer" onclick="window.open('cert-aig.jpg', '_blank')">
+                <div class="relative overflow-hidden rounded-[20px] shadow-sm bg-slate-50 dark:bg-slate-800 flex items-center justify-center aspect-[4/3]">
+                     <img src="cert-aig.jpg" alt="Shields Up: Cybersecurity Job Simulation" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" style="image-rendering: high-quality;">
+                     <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                <div class="pt-6 pb-2 px-2 text-center">
+                    <h4 class="font-bold text-xl mb-1 text-slate-800 dark:text-slate-200 transition-colors group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Shields Up: Cyber</h4>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">April 2026</p>
+                    <span class="inline-block bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-indigo-100 dark:border-indigo-800">AIG</span>
+                </div>
+            </div>
+
+            <!-- Certificate 6: Cyber Operations (April 2026) -->
+            <div class="bg-white dark:bg-slate-900 rounded-[32px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-slate-700 p-5 card-hover group cursor-pointer" onclick="window.open('cert-datacom.jpg', '_blank')">
+                <div class="relative overflow-hidden rounded-[20px] shadow-sm bg-slate-50 dark:bg-slate-800 flex items-center justify-center aspect-[4/3]">
+                     <img src="cert-datacom.jpg" alt="Cyber Security Operations Job Simulation" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" style="image-rendering: high-quality;">
+                     <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                <div class="pt-6 pb-2 px-2 text-center">
+                    <h4 class="font-bold text-xl mb-1 text-slate-800 dark:text-slate-200 transition-colors group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Cyber Operations</h4>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">April 2026</p>
+                    <span class="inline-block bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-indigo-100 dark:border-indigo-800">Datacom</span>
+                </div>
+            </div>
+
+            <!-- Certificate 7: Google Gemini (March 2026) -->
+            <div class="bg-white dark:bg-slate-900 rounded-[32px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-slate-700 p-5 card-hover group cursor-pointer" onclick="window.open('cert-gemini.jpg', '_blank')">
+                <div class="relative overflow-hidden rounded-[20px] shadow-sm bg-slate-50 dark:bg-slate-800 flex items-center justify-center aspect-[4/3]">
+                     <img src="cert-gemini.jpg" alt="Introduction to Google Gemini" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" style="image-rendering: high-quality;">
+                     <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                <div class="pt-6 pb-2 px-2 text-center">
+                    <h4 class="font-bold text-xl mb-1 text-slate-800 dark:text-slate-200 transition-colors group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Intro to Google Gemini</h4>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">March 2026</p>
+                    <span class="inline-block bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-indigo-100 dark:border-indigo-800">Simplilearn</span>
+                </div>
+            </div>
+
+            <!-- Certificate 8: Intro to Cybersecurity (January 2026) -->
+            <div class="bg-white dark:bg-slate-900 rounded-[32px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-slate-700 p-5 card-hover group cursor-pointer" onclick="window.open('cert-cisco.jpg', '_blank')">
+                <div class="relative overflow-hidden rounded-[20px] shadow-sm bg-slate-50 dark:bg-slate-800 flex items-center justify-center aspect-[4/3]">
+                     <img src="cert-cisco.jpg" alt="Introduction to Cybersecurity" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" style="image-rendering: high-quality;">
+                     <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                <div class="pt-6 pb-2 px-2 text-center">
+                    <h4 class="font-bold text-xl mb-1 text-slate-800 dark:text-slate-200 transition-colors group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Intro to Cybersecurity</h4>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">January 2026</p>
+                    <span class="inline-block bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-indigo-100 dark:border-indigo-800">Cisco Networking Academy</span>
+                </div>
+            </div>
+
+            <!-- Certificate 9: Cyber Job Simulation (October 2025) -->
+            <div class="bg-white dark:bg-slate-900 rounded-[32px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-slate-700 p-5 card-hover group cursor-pointer" onclick="window.open('cert-deloitte.jpg', '_blank')">
+                <div class="relative overflow-hidden rounded-[20px] shadow-sm bg-slate-50 dark:bg-slate-800 flex items-center justify-center aspect-[4/3]">
+                     <img src="cert-deloitte.jpg" alt="Cyber Job Simulation" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" style="image-rendering: high-quality;">
+                     <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                <div class="pt-6 pb-2 px-2 text-center">
+                    <h4 class="font-bold text-xl mb-1 text-slate-800 dark:text-slate-200 transition-colors group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Cyber Job Simulation</h4>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">October 2025</p>
+                    <span class="inline-block bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-indigo-100 dark:border-indigo-800">Deloitte & Forage</span>
+                </div>
+            </div>
+
+            <!-- Certificate 10: Python for Beginners (April 2025) -->
+            <div class="bg-white dark:bg-slate-900 rounded-[32px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-slate-700 p-5 card-hover group cursor-pointer" onclick="window.open('cert-python.jpg', '_blank')">
+                <div class="relative overflow-hidden rounded-[20px] shadow-sm bg-slate-50 dark:bg-slate-800 flex items-center justify-center aspect-[4/3]">
+                     <img src="cert-python.jpg" alt="Python for Beginners" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" style="image-rendering: high-quality;">
+                     <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                <div class="pt-6 pb-2 px-2 text-center">
+                    <h4 class="font-bold text-xl mb-1 text-slate-800 dark:text-slate-200 transition-colors group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Python for Beginners</h4>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">April 2025</p>
+                    <span class="inline-block bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-indigo-100 dark:border-indigo-800">Simplilearn</span>
+                </div>
+            </div>
+
+            <!-- Certificate 11: Java for Beginners (April 2025) -->
+            <div class="bg-white dark:bg-slate-900 rounded-[32px] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-slate-100 dark:border-slate-700 p-5 card-hover group cursor-pointer" onclick="window.open('cert-java.jpg', '_blank')">
+                <div class="relative overflow-hidden rounded-[20px] shadow-sm bg-slate-50 dark:bg-slate-800 flex items-center justify-center aspect-[4/3]">
+                     <img src="cert-java.jpg" alt="Java Programming for Beginners" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" style="image-rendering: high-quality;">
+                     <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+                <div class="pt-6 pb-2 px-2 text-center">
+                    <h4 class="font-bold text-xl mb-1 text-slate-800 dark:text-slate-200 transition-colors group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Java for Beginners</h4>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">April 2025</p>
+                    <span class="inline-block bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-indigo-100 dark:border-indigo-800">Simplilearn</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-950 dark:bg-black text-white pt-24 pb-40 px-6 lg:px-32 mt-20 transition-colors duration-300">
+        <div class="flex flex-col lg:flex-row justify-between items-center gap-10 border-b border-slate-800 dark:border-slate-800/50 pb-16 text-center lg:text-left">
+            <div>
+                <h2 class="text-4xl font-bold mb-4">Bhupendra Sinh Kushwaha <span class="text-indigo-500">.</span></h2>
+                <p class="text-slate-400 max-w-md mx-auto lg:mx-0">Currently looking for new opportunities. My inbox is always open.</p>
+                <div class="flex gap-4 mt-8 justify-center lg:justify-start">
+                    <a href="https://github.com/kuswahabhupendra75-debug" target="_blank" class="w-12 h-12 rounded-full border border-slate-700 flex items-center justify-center hover:bg-indigo-600 transition-colors text-xl"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/bhupendra-sinh-kushwaha-2010kush" target="_blank" class="w-12 h-12 rounded-full border border-slate-700 flex items-center justify-center hover:bg-indigo-600 transition-colors text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/the_bhupendra_kush_11.11" target="_blank" class="w-12 h-12 rounded-full border border-slate-700 flex items-center justify-center hover:bg-indigo-600 transition-colors text-xl"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-6 lg:items-end">
+                <div class="flex flex-col gap-3 text-slate-300 text-lg text-center lg:text-right">
+                    <a href="mailto:kuswahabhupendra75@gmail.com" class="hover:text-indigo-400 transition-colors flex items-center justify-center lg:justify-end gap-3"><i class="fas fa-envelope text-indigo-500"></i> kuswahabhupendra75@gmail.com</a>
+                    <a href="tel:+919265651510" class="hover:text-indigo-400 transition-colors flex items-center justify-center lg:justify-end gap-3"><i class="fas fa-phone-alt text-indigo-500"></i> +91 9265651510</a>
+                </div>
+                <a href="mailto:kuswahabhupendra75@gmail.com" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 px-10 rounded-2xl transition-colors shadow-lg shadow-indigo-900/50 flex items-center gap-3 justify-center">
+                    <i class="fas fa-paper-plane"></i> Say Hello
+                </a>
+            </div>
+        </div>
+        <p class="text-center mt-12 text-slate-500 text-sm font-medium">Designed & Built by Bhupendra Sinh Kushwaha</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    background-color: #f8fafc; 
+}
+
+.nav-blur {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.service-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service-card:hover {
+    background-color: #4f46e5;
+    color: white;
+    transform: scale(1.05);
+}
+
+.service-card:hover i { 
+    color: white; 
+}
+
+.card-hover:hover { 
+    transform: translateY(-8px); 
+    transition: all 0.3s ease; 
+}
+
+/* Image Enhancements for Certificates */
+#certificates img {
+    filter: contrast(1.05) saturate(1.05) drop-shadow(0 4px 6px rgba(0,0,0,0.05));
+    -webkit-font-smoothing: antialiased;
+    image-rendering: -webkit-optimize-contrast; /* Webkit crisp edges */
+    image-rendering: crisp-edges;
+}
+
+#certificates .group:hover img {
+    filter: contrast(1.1) saturate(1.1) drop-shadow(0 8px 12px rgba(0,0,0,0.1));
+}
+
+/* Profile Avatar Auto-Swap Animation */
+@keyframes profileSwap {
+    0%, 88% { opacity: 0; }
+    91%, 98% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.profile-auto-swap {
+    animation: profileSwap 11s infinite ease-in-out;
+}
+
+.group:hover .profile-auto-swap {
+    animation: none !important;
+    opacity: 1 !important;
+}
