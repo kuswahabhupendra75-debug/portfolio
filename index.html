@@ -8,8 +8,16 @@
     <script>
         tailwind.config = {
             darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
         }
     </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -33,13 +41,16 @@
     </div>
 
     <nav class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
-        <div class="nav-blur px-8 py-4 rounded-full flex items-center gap-8 shadow-2xl dark:bg-slate-800/80 dark:shadow-slate-900/50 border border-transparent dark:border-slate-700/50 transition-colors duration-300">
-            <a href="#home" class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-bold"><i class="fas fa-home"></i> Home</a>
-            <a href="#about" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition"><i class="fas fa-user"></i> About</a>
-            <a href="#skills" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition"><i class="fas fa-tools"></i> Skills</a>
-            <a href="#projects" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition"><i class="fas fa-th-large"></i> Projects</a>
-            <a href="#certificates" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition"><i class="fas fa-certificate"></i> Certificates</a>
-            <a href="#contact" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition"><i class="fas fa-envelope"></i> Contact</a>
+        <div class="nav-blur px-8 py-4 rounded-full flex items-center gap-6 shadow-2xl dark:bg-slate-800/80 dark:shadow-slate-900/50 border border-transparent dark:border-slate-700/50 transition-colors duration-300 whitespace-nowrap overflow-x-auto max-w-[90vw] hide-scrollbar">
+            <a href="#home" class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-bold shrink-0"><i class="fas fa-home"></i> Home</a>
+            <a href="#about" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition shrink-0"><i class="fas fa-user"></i> About</a>
+            <a href="#services" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition shrink-0"><i class="fas fa-briefcase"></i> What I Do</a>
+            <a href="#skills" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition shrink-0"><i class="fas fa-tools"></i> Skills</a>
+            <a href="#projects" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition shrink-0"><i class="fas fa-th-large"></i> Projects</a>
+            <a href="#journey" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition shrink-0"><i class="fas fa-route"></i> Journey</a>
+            <a href="#certificates" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition shrink-0"><i class="fas fa-certificate"></i> Certificates</a>
+            <a href="#resources" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition shrink-0"><i class="fas fa-book"></i> Resources</a>
+            <a href="#contact" class="flex items-center gap-2 text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition shrink-0"><i class="fas fa-envelope"></i> Contact</a>
         </div>
     </nav>
 
@@ -72,6 +83,33 @@
             <h2 class="text-4xl font-extrabold text-slate-900 dark:text-white mb-6">Securing the Digital World</h2>
             <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed">Based in Ahmedabad • BCA @ Kaushalya The Skill University (2027)</p>
             <p class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed mt-4">I enjoy understanding how networks operate and how to secure them against modern threats. My main focus these days is expanding my knowledge in vulnerability analysis and penetration testing.</p>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 px-6 lg:px-32 bg-slate-50 dark:bg-[#0f0f0f] transition-colors duration-300 border-t border-slate-200 dark:border-slate-800/50">
+        <div class="flex justify-between items-end mb-16">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 dark:text-white tracking-tight">What I Do</h2>
+            <a href="#contact" class="text-indigo-600 dark:text-indigo-400 font-semibold hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors flex items-center gap-2">Contact Me <i class="fas fa-arrow-right text-sm"></i></a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Service 1 -->
+            <div class="p-8 rounded-[24px] bg-white dark:bg-[#1a1a1a] border border-slate-200 dark:border-slate-800/50 hover:border-indigo-500/50 dark:hover:border-indigo-500/50 transition-all duration-300 group cursor-pointer shadow-sm hover:shadow-md dark:shadow-none">
+                <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-slate-100 mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Vulnerability Assessment</h4>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Comprehensive security testing to identify and patch vulnerabilities in your web applications and network infrastructure. From initial scanning to final reporting.</p>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="p-8 rounded-[24px] bg-white dark:bg-[#1a1a1a] border border-slate-200 dark:border-slate-800/50 hover:border-indigo-500/50 dark:hover:border-indigo-500/50 transition-all duration-300 group cursor-pointer shadow-sm hover:shadow-md dark:shadow-none">
+                <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-slate-100 mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Security Consultation</h4>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Guidance on security best practices, secure coding guidelines, and setting up robust security architectures tailored to your project requirements.</p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="p-8 rounded-[24px] bg-white dark:bg-[#1a1a1a] border border-slate-200 dark:border-slate-800/50 hover:border-indigo-500/50 dark:hover:border-indigo-500/50 transition-all duration-300 group cursor-pointer shadow-sm hover:shadow-md dark:shadow-none">
+                <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-slate-100 mb-4 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Malware Analysis</h4>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Basic static and dynamic analysis of suspicious files to determine their behavior and potential impact, ensuring a safe digital environment.</p>
+            </div>
         </div>
     </section>
 
@@ -308,6 +346,97 @@
                     <h4 class="font-bold text-xl mb-1 text-slate-800 dark:text-slate-200 transition-colors group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Java for Beginners</h4>
                     <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">April 2025</p>
                     <span class="inline-block bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 text-xs font-bold px-3 py-1 rounded-full border border-indigo-100 dark:border-indigo-800">Simplilearn</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="py-24 px-6 lg:px-32 bg-slate-50 dark:bg-[#0f0f0f] transition-colors duration-300 border-t border-slate-200 dark:border-slate-800/50">
+        <div class="flex justify-between items-end mb-16">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 dark:text-white tracking-tight">Journey Highlights</h2>
+            <a href="#about" class="text-indigo-600 dark:text-indigo-400 font-semibold hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors flex items-center gap-2">View All <i class="fas fa-arrow-right text-sm"></i></a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Highlight 1 -->
+            <div class="rounded-[24px] bg-white dark:bg-[#1a1a1a] border border-slate-200 dark:border-slate-800/50 overflow-hidden group hover:-translate-y-2 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-xl dark:shadow-none">
+                <div class="h-56 relative overflow-hidden bg-slate-200 dark:bg-slate-800">
+                    <img src="cert-aig.jpg" alt="Cyber Journey" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 mix-blend-overlay">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/20 to-transparent opacity-0 dark:opacity-100"></div>
+                </div>
+                <div class="p-8">
+                    <p class="text-indigo-600 dark:text-indigo-400 text-sm font-semibold mb-3">April 2026</p>
+                    <h4 class="font-serif font-bold text-2xl text-slate-900 dark:text-slate-100 mb-3">The Cyber Journey Accelerates</h4>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 line-clamp-2">Completed multiple job simulations with top companies like Mastercard, AIG, and TATA, gaining hands-on experience in vulnerability management and security operations.</p>
+                    <a href="#certificates" class="text-indigo-600 dark:text-indigo-400 text-sm font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Highlight 2 -->
+            <div class="rounded-[24px] bg-white dark:bg-[#1a1a1a] border border-slate-200 dark:border-slate-800/50 overflow-hidden group hover:-translate-y-2 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-xl dark:shadow-none">
+                <div class="h-56 relative overflow-hidden bg-slate-200 dark:bg-slate-800">
+                    <img src="cybershield_pro_demo.webp" alt="Project Launch" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 mix-blend-overlay">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/20 to-transparent opacity-0 dark:opacity-100"></div>
+                </div>
+                <div class="p-8">
+                    <p class="text-indigo-600 dark:text-indigo-400 text-sm font-semibold mb-3">February 2026</p>
+                    <h4 class="font-serif font-bold text-2xl text-slate-900 dark:text-slate-100 mb-3">CyberShield Pro Launched</h4>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 line-clamp-2">Successfully developed and deployed an AI-Based Phishing Website Detection System that helps users identify malicious URLs in real-time using machine learning.</p>
+                    <a href="#projects" class="text-indigo-600 dark:text-indigo-400 text-sm font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="py-24 px-6 lg:px-32 bg-white dark:bg-[#0f0f0f] transition-colors duration-300 border-t border-slate-200 dark:border-slate-800/50">
+        <div class="flex justify-between items-end mb-16">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 dark:text-white tracking-tight">Latest Resources</h2>
+            <a href="#contact" class="text-indigo-600 dark:text-indigo-400 font-semibold hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors flex items-center gap-2">View All <i class="fas fa-arrow-right text-sm"></i></a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Resource 1 -->
+            <div class="p-8 rounded-[24px] bg-slate-50 dark:bg-[#1a1a1a] border border-slate-200 dark:border-slate-800/50 hover:-translate-y-1 transition-all duration-300 group cursor-pointer flex flex-col h-full relative overflow-hidden shadow-sm hover:shadow-md dark:shadow-none">
+                <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="flex gap-2 mb-6">
+                    <span class="text-[10px] uppercase tracking-wider bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-400 font-bold px-2.5 py-1 rounded-md border border-indigo-200 dark:border-indigo-800/60">Web Security</span>
+                    <span class="text-[10px] uppercase tracking-wider bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-400 font-bold px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700/60">Pdf</span>
+                </div>
+                <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-slate-100 mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">OWASP Top 10 - Mitigation Guide</h4>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-8 flex-grow">A simplified explanation of the most critical web application security risks with real-life mitigation examples.</p>
+                <div class="flex justify-between items-center text-xs text-slate-500 dark:text-slate-500 font-medium pt-4 border-t border-slate-200 dark:border-slate-800/50">
+                    <span>18 April 2026</span>
+                    <span class="flex items-center gap-1 hover:text-rose-500 transition-colors"><i class="far fa-heart"></i> 12</span>
+                </div>
+            </div>
+
+            <!-- Resource 2 -->
+            <div class="p-8 rounded-[24px] bg-slate-50 dark:bg-[#1a1a1a] border border-slate-200 dark:border-slate-800/50 hover:-translate-y-1 transition-all duration-300 group cursor-pointer flex flex-col h-full relative overflow-hidden shadow-sm hover:shadow-md dark:shadow-none">
+                <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="flex gap-2 mb-6">
+                    <span class="text-[10px] uppercase tracking-wider bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-400 font-bold px-2.5 py-1 rounded-md border border-indigo-200 dark:border-indigo-800/60">Networking</span>
+                    <span class="text-[10px] uppercase tracking-wider bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-400 font-bold px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700/60">Pdf</span>
+                </div>
+                <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-slate-100 mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Nmap Commands - Quick Reference</h4>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-8 flex-grow">A handy reference of important Nmap commands used in reconnaissance, port scanning, and vulnerability detection.</p>
+                <div class="flex justify-between items-center text-xs text-slate-500 dark:text-slate-500 font-medium pt-4 border-t border-slate-200 dark:border-slate-800/50">
+                    <span>05 March 2026</span>
+                    <span class="flex items-center gap-1 hover:text-rose-500 transition-colors"><i class="far fa-heart"></i> 8</span>
+                </div>
+            </div>
+
+            <!-- Resource 3 -->
+            <div class="p-8 rounded-[24px] bg-slate-50 dark:bg-[#1a1a1a] border border-slate-200 dark:border-slate-800/50 hover:-translate-y-1 transition-all duration-300 group cursor-pointer flex flex-col h-full relative overflow-hidden shadow-sm hover:shadow-md dark:shadow-none">
+                <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="flex gap-2 mb-6">
+                    <span class="text-[10px] uppercase tracking-wider bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-400 font-bold px-2.5 py-1 rounded-md border border-indigo-200 dark:border-indigo-800/60">Linux / OS</span>
+                    <span class="text-[10px] uppercase tracking-wider bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-400 font-bold px-2.5 py-1 rounded-md border border-slate-300 dark:border-slate-700/60">Pdf</span>
+                </div>
+                <h4 class="font-serif font-bold text-xl text-slate-900 dark:text-slate-100 mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Linux Privilege Escalation Cheat Sheet</h4>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-8 flex-grow">A complete reference of essential Linux commands and misconfigurations used during post-exploitation.</p>
+                <div class="flex justify-between items-center text-xs text-slate-500 dark:text-slate-500 font-medium pt-4 border-t border-slate-200 dark:border-slate-800/50">
+                    <span>12 January 2026</span>
+                    <span class="flex items-center gap-1 hover:text-rose-500 transition-colors"><i class="far fa-heart"></i> 24</span>
                 </div>
             </div>
         </div>
